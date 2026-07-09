@@ -13,6 +13,12 @@ body {
   background: #000000;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .whatsapp-container {
   position: fixed;
   right: 25px;
@@ -94,6 +100,12 @@ body {
 .whatsapp-menu a:hover {
   background: #25D366;
   color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 header {
@@ -760,16 +772,19 @@ nav a{
     display:block;
 }
 
-.hero {
-    height: 100vh;
-    padding: 120px 30px 40px;
-    justify-content: flex-start;
-    text-align: left;
+.hero{
+    height:100vh;
+    padding:90px 20px 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-
-.hero-content {
-    max-width: 300px;
+.hero-content{
+    width:100%;
+    max-width:320px;
+    margin:0 auto;
 }
 
 
@@ -800,41 +815,44 @@ nav a{
     padding: 40px 20px;
 }
 
-.grid {
-    flex-direction: column;
+.grid{
+    display:flex;
+    flex-direction:column;
     align-items:center;
 }
 
-.card {
-    width: 100%;
-    max-width: 340px;
+.card{
+    width:100%;
+    max-width:330px;
 }
 
 
 /* SOBRE NÓS */
 
-.sobre {
-    flex-direction: column;
-    padding: 70px 20px;
-    gap: 20px;
+.sobre{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
+
 
 .sobre-img {
     display:none;
 }
 
-.sobre-texto {
+.sobre-texto{
     width:100%;
+    max-width:340px;
 }
 
-.sobre-texto h2 {
-    text-align:left;
-    font-size:23px;
+.sobre-texto h2{
+    text-align:center;
 }
 
-.sobre-texto h2::after {
-    left:0;
-    transform:none;
+.sobre-texto h2::after{
+    left:50%;
+    transform:translateX(-50%);
 }
 
 .sobre-texto p {
@@ -844,12 +862,11 @@ nav a{
 }
 
 
-.sobre-cubos-videira {
+.sobre-cubos-videira{
+    display:grid;
     grid-template-columns:1fr;
-}
-
-.sobre-cubo-videira {
-    padding:25px;
+    width:100%;
+    padding:0 20px;
 }
 
 
