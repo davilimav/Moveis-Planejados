@@ -68,22 +68,15 @@ async function enviarMensagem(event) {
 
     const data = await resposta.json();
 
-    if (data.ok) {
+if (data.ok) {
 
-      document.getElementById("msg").innerText =
-        "Orçamento enviado com sucesso!";
+    alert("Orçamento enviado com sucesso!");
 
-      document.querySelector("form").reset();
+    setTimeout(() => {
+        location.reload();
+    }, 2000);
 
-      document.querySelectorAll(".opcao").forEach(botao => {
-        botao.classList.remove("ativa");
-      });
-
-      document.getElementById("home").scrollIntoView({
-        behavior: "smooth"
-      });
-
-    } else {
+} else {
 
       document.getElementById("msg").innerText =
         "Erro ao enviar orçamento.";
@@ -118,5 +111,5 @@ const menuToggle = document.getElementById("menuToggle");
 const menuArea = document.querySelector(".menu-area");
 
 menuToggle.addEventListener("click", () => {
-    menuArea.classList.toggle("ativo");
+  menuArea.classList.toggle("ativo");
 });
