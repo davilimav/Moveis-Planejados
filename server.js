@@ -10,8 +10,8 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "vergueirolimadavi@gmail.com",
-    pass: "cfgc djno lvbe kzco"
+    user: "videiramoveis01@gmail.com",
+    pass: "vnrh ulgo tmrx lioc"
   }
 });
 
@@ -33,13 +33,13 @@ app.post("/enviar", async (req, res) => {
 
     await transporter.sendMail({
 
-      from: "vergueirolimadavi@gmail.com",
+  from: "videiramoveis01@gmail.com",
 
-      to: "vergueirolimadavi@gmail.com",
+  to: "videiramoveis01@gmail.com",
 
-      subject: "Novo orçamento - Móveis Videira",
+  subject: "Novo orçamento - Móveis Videira",
 
-      text: `
+  text: `
 NOVO ORÇAMENTO
 
 Nome: ${nome}
@@ -55,9 +55,9 @@ Cor Predominante: ${cor}
 Faixa de Investimento: ${investimento}
 
 Prazo Desejado: ${prazo}
-      `
+  `
 
-    });
+});
 
     res.json({
       ok: true
