@@ -325,14 +325,20 @@ nav a:hover {
   gap: 30px;
   max-width: 1300px;
   margin: 0 auto;
+
+  align-items: stretch;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
   background: rgb(218, 216, 216);
-  width: 400px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   transition: transform .35s ease, box-shadow .35s ease;
 }
 
@@ -693,19 +699,11 @@ form>button[type="submit"]:hover {
   color: #ffb347;
 }
 
-
 /* ==========================
    RESPONSIVIDADE
 ========================== */
 
-/* ==========================
-   RESPONSIVIDADE MOBILE
-========================== */
-
 @media (max-width: 768px) {
-
-
-  /* HEADER */
 
   header {
     height: 70px;
@@ -714,32 +712,25 @@ form>button[type="submit"]:hover {
     justify-content: space-between;
   }
 
-
   .logo {
     width: 65px;
     height: 65px;
   }
 
-
   .menu-toggle {
     display: block;
   }
-
 
   .menu-area {
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
-
     background: #000000;
-
     display: none;
     flex-direction: column;
-
     padding: 20px;
   }
-
 
   .menu-area.ativo {
     display: flex;
@@ -764,8 +755,6 @@ form>button[type="submit"]:hover {
     margin-top: 15px;
     width: 100%;
   }
-
-  /* HERO */
 
   .hero-desktop {
     display: none;
@@ -811,9 +800,6 @@ form>button[type="submit"]:hover {
     border-radius: 6px;
   }
 
-
-  /* PRODUTOS */
-
   #produtos {
     padding: 40px 20px;
   }
@@ -830,16 +816,12 @@ form>button[type="submit"]:hover {
     max-width: 330px;
   }
 
-
-  /* SOBRE NÓS */
-
   .sobre {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-
 
   .sobre-img {
     display: none;
@@ -873,9 +855,6 @@ form>button[type="submit"]:hover {
     padding: 0 20px;
   }
 
-
-  /* FORMULÁRIO */
-
   #contato {
     padding: 70px 15px;
   }
@@ -898,7 +877,6 @@ form>button[type="submit"]:hover {
     min-height: auto;
   }
 
-
   .footer-container {
     display: flex;
     flex-direction: column;
@@ -906,13 +884,11 @@ form>button[type="submit"]:hover {
     gap: 30px;
   }
 
-
   .logo-footer {
     position: static;
     width: 160px;
     margin: 0 auto -50px;
   }
-
 
   .footer-col {
     width: 100%;
@@ -920,12 +896,10 @@ form>button[type="submit"]:hover {
     text-align: left;
   }
 
-
   .footer-col p {
     margin: 5px 0;
     line-height: 1.5;
   }
-
 
   .footer-links,
   .footer-social {
@@ -934,15 +908,10 @@ form>button[type="submit"]:hover {
     margin-top: 15px;
   }
 
-
-  /* Caso sejam links de imagem */
   .footer-links a {
     display: inline-block;
     margin-right: 15px;
   }
-
-
-  /* WHATSAPP */
 
   .whatsapp-container {
     right: 15px;
@@ -958,28 +927,41 @@ form>button[type="submit"]:hover {
 
 }
 
+@media (max-width:575px){
+
+    #produtos{
+
+        padding:40px 15px;
+
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+        gap:20px;
+
+    }
+
+    .card img{
+
+        height:220px;
+
+    }
+
+}
+
 
 /* ==========================
    TABLET
 ========================== */
 
-@media (min-width:769px) and (max-width:1024px) {
+@media (min-width:769px) and (max-width:1024px){
 
-  .sobre {
-    padding: 100px 5%;
-    gap: 30px;
-  }
-
-  .sobre-texto h2 {
-    font-size: 32px;
-  }
-
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 300px);
-  }
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
 
 }
