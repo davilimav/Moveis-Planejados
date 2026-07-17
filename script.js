@@ -95,7 +95,7 @@ document.querySelector("[data-grupo='prazo'] .ativa")?.innerText || "";
 try{
 
 
-const resposta = await fetch("http://localhost:3000/enviar",{
+const resposta = await fetch("/enviar", {
 
 
 method:"POST",
