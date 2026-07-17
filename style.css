@@ -955,6 +955,10 @@ form>button[type="submit"]:hover {
    TABLET
 ========================== */
 
+/* ==========================
+   TABLET
+========================== */
+
 @media (min-width:769px) and (max-width:1024px){
 
     .grid{
@@ -962,6 +966,26 @@ form>button[type="submit"]:hover {
         gap: 25px;
         max-width: 700px;
         margin: 0 auto;
+    }
+
+    .sobre{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 80px 40px;
+    }
+
+    .sobre-img{
+        display: none;
+    }
+
+    .sobre-texto{
+        max-width: 800px;
+    }
+
+    .sobre-texto h2::after{
+        left: 50%;
+        transform: translateX(-50%);
     }
 
 }
